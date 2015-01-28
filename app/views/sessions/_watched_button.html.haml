@@ -1,0 +1,4 @@
+%button{type: "button", class: "btn btn-primary", id: "unwatch", disabled: "disabled"}
+  =link_to "Unwatched", dashboard_path, remote: true
+%button{type: "button", class: "btn btn-default", id: "watch"}
+  =link_to "Watched", watched_movies_path, remote: true

@@ -1,0 +1,13 @@
+.row
+  .col-md-6.col-md-offset-3
+    .dashboard-main
+      %h3.header.pull-left=current_user.first_name + "'s Unwatched Movies"
+      %h5#list_toggle.pull-right.btn-group
+        %button{type: "button", class: "btn btn-primary", id: "unwatch", disabled: "disabled"}
+          =link_to "Unwatched", dashboard_path, remote: true
+        %button{type: "button", class: "btn btn-default", id: "watch"}
+          =link_to "Watched", watched_movies_path, remote: true
+      .clearfix
+      %h5=link_to "Add Movie", new_movie_path, class: "btn btn-success", id: "new_movie_link", remote: true
+      #movie-list
+        = render @unwatched_movies

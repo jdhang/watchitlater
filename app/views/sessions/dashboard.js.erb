@@ -1,0 +1,4 @@
+$('.header').html("<%= current_user.first_name + '\'s Unwatched Movies' %>");
+$('#list_toggle').html("<%= j render('watched_button') %>");
+$('#movie-list').html("<%= j render(@unwatched_movies) %>");
+$('#new_movie_link').show();
