@@ -1,0 +1,13 @@
+=form_tag "#" do
+  .form-group
+    =text_field_tag :username, nil, placeholder: "Username", class: "form-control"
+  .form-group
+    =text_field_tag :first_name, nil, placeholder: "First Name", class: "form-control"
+  .form-group
+    =text_field_tag :last_name, nil, placeholder: "Last Name", class: "form-control"
+  .form-group
+    =password_field_tag :password, nil, placeholder: "Password", class: "form-control"
+  .form-group
+    =password_field_tag :password_confirmation, nil, placeholder: "Password Confirmation", class: "form-control"
+  .form-group
+    =submit_tag "Register", class: "btn btn-success"

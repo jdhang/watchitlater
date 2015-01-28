@@ -1,0 +1,8 @@
+.row
+  .col-md-6.col-md-offset-2
+    .dashboard-main
+      %h4= "Bob's Movies to Watch"
+      %h5= link_to "Add Movie", "#", class: "btn btn-success btn-sm", id: "new_movie"
+      #movie-list
+        -5.times do |i|
+          = render 'movie_row', i: i

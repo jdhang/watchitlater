@@ -1,0 +1,9 @@
+.movie-row{ :data => { :movie => (i+1).to_s } }
+  .movie-checkbox.text-center
+    =link_to "#", method: "post", remote: true do
+      %input{:type => "checkbox"}
+  .movie-name
+    =link_to "Movies " + (i+1).to_s, "#"
+  .movie-delete
+    =link_to "#", method: "delete", remote: true  do
+      %i.fa.fa-times.pull-right
