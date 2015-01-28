@@ -1,0 +1,5 @@
+=form_for(@movie, remote: true) do |f|
+  .input-group
+    =f.text_field :title, placeholder: "Movie Title", class: "form-control"
+    %span.input-group-btn
+      =f.submit "+", class: "btn btn-success btn-small"

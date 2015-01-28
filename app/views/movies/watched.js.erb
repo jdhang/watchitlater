@@ -1,0 +1,2 @@
+$(".movie-row[data-movie='<%= @movie.id %>']").find('.movie-checkbox input').prop('checked', true);
+$(".movie-row[data-movie='<%= @movie.id %>']").fadeOut('slow', function(){ this.remove(); });
