@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_path, notice: "You have successfully logged in."
     else
-      redirect_to login_path, error: "Your username or password was incorrect."
+      flash[:error] = "Your username or password was incorrect."
+      redirect_to login_path
     end
   end
 
