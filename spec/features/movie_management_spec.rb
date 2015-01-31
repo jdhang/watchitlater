@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 feature "Movie management" do
-  let!(:bob) { Fabricate(:user, first_name: "Bob") }
-  let!(:movie) { Fabricate(:movie, title: "Avatar", user: bob) }
   scenario "User create a new movie", :js => true do
+    bob = Fabricate(:user)
     login(bob)
+
+    expect(page).to have_content "Unwatched Movies"
 
     click_link "Add Movie"
 
@@ -14,6 +15,8 @@ feature "Movie management" do
     expect(page).to have_content "Avatar"
   end
   scenario "User edits movie", :js => true do
+    bob = Fabricate(:user, first_name: "Bob")
+    Fabricate(:movie, title: "Avatar", user: bob)
     login(bob)
 
     click_link "Avatar"
