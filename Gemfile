@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'haml-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -19,6 +18,7 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails', '~> 3.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -44,5 +44,9 @@ group :test do
   gem 'shoulda-matchers', require: false
   gem 'capybara'
   gem 'capybara-webkit'
+end
+
+group :production do
+  gem 'pg'
 end
 
