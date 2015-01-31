@@ -12,6 +12,6 @@ feature "User login" do
     fill_in "Username", with: bob.username
     fill_in "Password", with: "test"
     click_button "Login"
-    expect(page).to have_content "Login"
+    expect(page).to have_content "Your username or password was incorrect."
   end
 end
